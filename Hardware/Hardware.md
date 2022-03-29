@@ -26,6 +26,10 @@ The motor controller is used to power the 6 motors on the rover as well as send 
 </p>
   
 ## Rover Batteries
+The rover batteries we used are *****
+
+## Rover Wiring
+In terms of wiring on the rover, I have included a graphic showing the different components of the rover wired together below. ***
 
 ## Pixhawk Microcontroller
 
@@ -38,6 +42,7 @@ All other specifications on the Pixhawk Microcontroller as well as the different
 </p>
 
 ## Rover Low Accuracy GPS Module
+
 
 ## Rover RTK GPS Modules
 
