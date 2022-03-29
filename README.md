@@ -1,4 +1,4 @@
-# RTK-GPS_Implementation
+# High_Accuracy_GPS_Implementation
 A repository that hosts information for the High Accuracy GPS Implementation project.
 
 ## Project Info
