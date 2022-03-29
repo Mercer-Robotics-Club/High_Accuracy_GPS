@@ -13,32 +13,31 @@ Our client is Dr. Anthony Choi from Mercer University.
 ## Use Case
 We implemented the GPS system in an autonmous rover as pictured below
 <p align="center">
-  <img src="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Images/Senior%20Design%20High%20Accuracy%20GPS%20Update.jpg" />
+  <img src="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Images/Senior%20Design%20High%20Accuracy%20GPS%20Update.jpg" />
 </p>
 <p>
-  More information on how to set the hardware and electronics can be found in the <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md">Hardware README</a> ***Change link to Hardware.md#Rover_Hardware***
-</p>
+  More information on how to set the hardware and electronics can be found in the <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Hardware">Hardware README</a>
 
 ## Supporting Hardware
 For the rover, we utilized a variety of hardware and electronics together in it's current design.
 <p>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_Chassis">Rover Chassis</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Chassis">Rover Chassis</a>
   <br>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_Motors">Rover Motors</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Motors">Rover Motors</a>
   <br>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_Motor_Controller">Rover Motor Controller</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Motor_Controller">Rover Motor Controller</a>
   <br>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_Batteries">Rover Batteries</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Batteries">Rover Batteries</a>
   <br>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_Microcontroller">Rover Microcontroller</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Microcontroller">Rover Microcontroller</a>
   <br>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_Low_Accuracy_GPS_Module">Rover Low Accuracy GPS Module</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Low_Accuracy_GPS_Module">Rover Low Accuracy GPS Module</a>
   <br>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_RTK_GPS_Modules">Rover RTK GPS Modules</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_RTK_GPS_Modules">Rover RTK GPS Modules</a>
   <br>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_Power Management">Rover Power Management</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Power Management">Rover Power Management</a>
   <br>
-  - <a href="https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Hardware.md#Rover_Communication_with_Base-Station/User">Rover Communication with Base-Station/User</a>
+  - <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Communication_with_Base-Station/User">Rover Communication with Base-Station/User</a>
 </p>
 
 
