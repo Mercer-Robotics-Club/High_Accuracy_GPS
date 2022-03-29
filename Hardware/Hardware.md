@@ -9,7 +9,7 @@ The rover chassis was already built and setup when we first got onto the project
 </p>
 
 <p align ="center">
-  <img src = "https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Images/Screenshot%20from%202022-03-28%2014-20-21.png" />
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/Screenshot%20from%202022-03-28%2014-20-21.png" />
 </p>
 
 
@@ -22,7 +22,7 @@ Our chassis came with motors geared 75:1 and all specifications we know of can b
 The motor controller is used to power the 6 motors on the rover as well as send signals for when to rotate clockwise, counter-clockwise, or turn off. The specific motor controller that was already set in the rover can be found <a href = "https://www.dimensionengineering.com/products/sabertooth2x25">here</a>
 
 <p align = "center">
-  <img src = "https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Images/Screenshot%20from%202022-03-28%2014-46-53.png" />
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/Screenshot%20from%202022-03-28%2014-46-53.png" />
 </p>
   
 ## Rover Batteries
@@ -34,7 +34,7 @@ The 3DR Pixhawk 1 Flight Controller (Currently Discontinued) is the main brain o
 All other specifications on the Pixhawk Microcontroller as well as the different inputs, outputs, and guide to implement can be found <a href = "https://docs.px4.io/master/en/flight_controller/pixhawk.html">here</a> as well as throughout the PX4 User guide on the same webpage.
 
 <p align = "center">
-  <img src = "https://github.com/williamdb19/RTK-GPS_Implementation/blob/main/Hardware/Images/Screenshot%20from%202022-03-28%2014-50-32.png" />
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/Screenshot%20from%202022-03-28%2014-50-32.png" />
 </p>
 
 ## Rover Low Accuracy GPS Module
