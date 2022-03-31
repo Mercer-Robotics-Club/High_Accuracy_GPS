@@ -62,5 +62,15 @@ This low accuracy GPS module worked great in testing (Based on performance in in
 
 ## Rover RTK GPS Modules
 
+The RTK GPS modules we used in our project is the C94-M8P RTK module sold by U-Blox and can be found <a href = https://www.u-blox.com/en/product/c94-m8p> here </a>. This page also includes downloads for quick user guide for setting up the RTK system, a data sheet on hardware specs of the module, and a product summary on the board's features. A picture of module is displayed below.
+
+<p align = "center">
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/Screenshot%20from%202022-03-29%2016-59-35.png" />
+</p>
+
+The RTK modules were supplied by our client from a past project trying to implement the board into the same rover setup. The RTK modules are featured to have "centimeter level accuracy in clear sky environments" and testing by our team was done, included in the main README, to measure relative accuracy and confirm these results. 
+
+The RTK modules come in a pair of 2 (One set as the Base Station module would be at a fixed position during use and the other as the Rover module would be attached to the rover). Information on how to use software to setup the modules are found in the (!!! include link to section in software README for setting up RTK modules!!!) 
+
 ## Rover communication with Base-Station/User
 
