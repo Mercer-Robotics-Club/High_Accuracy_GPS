@@ -74,3 +74,16 @@ The RTK modules come in a pair of 2 (One set as the Base Station module would be
 
 ## Rover communication with Base-Station/User
 
+we utilize a 915 Mhz telemetry radio for communicating the Rover with the Base Station. The radio can be found <a href = "https://store.mrobotics.io/mRo-SiK-Telemetry-Radio-V2-915Mhz-p/m10013-rk.htm">here</a> and a picture of the radio is included below.
+
+<p align = "center">
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/M10013-RK-3T.jpg" />
+</p>
+
+This radio was used as it is said to have easy implementation for the Pixhawk micro-controller as well as Mission Planner and seemed to have good reviews.
+
+(*PREFACE!!: When buying the radio, we did not take into account that the radio frequency (915 Mhz) is the same frequency used by the RTK Ultra-high Frequency antennas. Operating at the same frequency could cause inteference due to being so close together but we were able to have the RTK Modules communicate at the Base Station by using Mission Planner to integrate the module through USB and at the Rover by sending communication from the RTK-GPS, through the GPS port, to the Pixhawk which would be then sent to the Base Station through the telemetry radio. If a new telemetry radio is bought, take this into account any maybe buy one that operates at a different frequency. You could also look into our setup as sl
+
+I have included a diagram below to show how the Base Station is setup. The telemetry radio is included in the Rover wiring diagram as well as the diagram below.
+
+(!!!Wiring diagram of Base Station as well as a picture!!!)
