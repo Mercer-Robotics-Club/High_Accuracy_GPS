@@ -26,14 +26,16 @@ The motor controller is used to power the 6 motors on the rover as well as send 
 </p>
   
 ## Rover Batteries
-The rover batteries we used are 2 LiPo Batteries which are both 5200 mAh at 7.4 V and 35 C. A picture of one of the batteries is shown below. We did not do any testing on whether these batteries we best for our application as these were already included in the Rover setup when given to us. They worked right from powering on and we decided not to do any more research/changes on the battery.
+The rover batteries we used are 2 LiPo Batteries which are both 5200 mAh at 7.4 V and 35 C. A picture of one of the batteries is shown below. 
 
 <p align = "center">
   <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/20220331_130618.jpg" />
 </p>
 
+We did not do any testing on whether these batteries we best for our application as these were already included in the Rover setup when given to us. They worked right from powering on and we decided not to do any more research/changes on the battery.
+
 ## Rover Wiring
-In terms of wiring on the rover, I have included a graphic showing the different components of the rover wired together below. ***
+In terms of wiring on the rover, I have included a graphic showing the different components of the rover wired together below. (!!! include wiring setup for the low accuracy testing and high accuracy testing --Real pictures and diagrams for both!!!!)
 
 ## Pixhawk Microcontroller
 
@@ -46,7 +48,15 @@ All other specifications on the Pixhawk Microcontroller as well as the different
 </p>
 
 ## Rover Low Accuracy GPS Module
+The low accuracy GPS module we used in our low accuracy testing is the 3DR uBlox GPS With Compass. A picture of it is shown below and the GPS module can be found and bought <a href = https://uavsystemsinternational.com/products/3dr-ublox-gps-with-compass> here </a>.
 
+<p align = "center">
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/GPS_TopAndSide.jpg" />
+</p>
+
+Documentation on how to use it, in combination with the Pixhawk can be found <a href = https://ardupilot.org/copter/docs/common-installing-3dr-ublox-gps-compass-module.html> here </a>. This GPS module comes with a compass which we utilized, in combination with the compass built in to the Pixhawk, for direction. This compass setup was used in our low accuracy and high accuracy GPS testing. Wiring for this setup was different in each situation and included in the [Rover Wiring][Hardware#Rover_Wiring] section. Setup for both compasses is included in the (!!!Include which software section for compass setup!!!).
+
+This low accuracy GPS module worked great in testing (Based on performance in intial README) and was included in the rover setup when it was given to us. In high accuracy testing the module was only used for it's compass as we saw it perform better in combination with the Pixhawk built-in compass.
 
 ## Rover RTK GPS Modules
 
