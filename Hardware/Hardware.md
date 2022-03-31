@@ -26,7 +26,11 @@ The motor controller is used to power the 6 motors on the rover as well as send 
 </p>
   
 ## Rover Batteries
-The rover batteries we used are *****
+The rover batteries we used are 2 LiPo Batteries which are both 5200 mAh at 7.4 V and 35 C. A picture of one of the batteries is shown below. We did not do any testing on whether these batteries we best for our application as these were already included in the Rover setup when given to us. They worked right from powering on and we decided not to do any more research/changes on the battery.
+
+<p align = "center">
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/20220331_130618.jpg" />
+</p>
 
 ## Rover Wiring
 In terms of wiring on the rover, I have included a graphic showing the different components of the rover wired together below. ***
