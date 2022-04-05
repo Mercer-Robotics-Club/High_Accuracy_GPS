@@ -25,7 +25,7 @@ User guide for u-center can be downloaded <a href = https://ardupilot.org/planne
 
 The software we used, U-Blox u-center (Version V22.02) can be found and downloaded <a href = https://www.u-blox.com/en/product/u-center> here </a>. Just click the download button and complete setup. 
 
-User guide for Mission Planner can be found <a href = https://www.u-blox.com/sites/default/files/u-center_Userguide_UBX-13005250.pdf> here </a>
+User guide for u-center can be found <a href = https://www.u-blox.com/sites/default/files/u-center_Userguide_UBX-13005250.pdf> here </a>
 
 *NOTE: The version of u-center that we used is version 22.02 but newer version should still work in this setup. The location of certain items in u-center may be moved, changed, or renamed. Please research the user documentation or online help in that case*
 
@@ -45,9 +45,26 @@ The base station must be set to TIME mode. To do this, navigate to the UBX-CFG-T
 - If a fixed position with known coordinates is already available, set the appropriate coordinates in the Fixed Position section.
 - Otherwise, a Survey-In can be conducted. Place the rover module antenna in the desired position and ensure it does not move for the duration of the survey, then specify the minimum observation time (in seconds) and required accuracy (in meters).
 
-Once appropriate message fields are specified, send the message to the rover (see figure below).
+Once appropriate message fields are specified, click Send to send the message to the rover (see figure below).
+
+The Survey-In can be monitored by polling the UBX-NAV-SVIN message. Note that messages may not update automatically, and may need to be manually polled in order to receive information in real time. 
+
+Once the survey is completed, the correct communication protocols should be configured using the UBX-CFG-PRT message (see figure below). For the base station, ensure only RTCM messages are sent to the rover using UART1, and specify the baud rate (usually, this should be 19200). Click Send.
+
+Finally, enable the following RTCM signals on UART1 using the UBX-CFG-MSG message (see figure below):
+- F5-05 RTCM3.2 1005 enabled on UART1 (set to 1)
+- F5-4D RTCM3.2 1077 enabled on UART1 (set to 1)
+- F5-57 RTCM3.2 1087 enabled on UART1 (set to 1)
+- F5-E6 RTCM3.2 1230 enabled on UART1 (set to 10)
+For each message, click Send.
+
+Once the base station module is successfully configured, the Fix Mode should automatically update to TIME mode (see figure below).
 
 #### Setting up the rover module
+
+After connecting the u-center application to the rover module, only the UBX-CFG-PRT message needs to be sent (see figure below). Ensure that only RTCM messages from the base station are being received using UART1, and specify the same baud rate used by the base station. Click Send.
+
+Once the rover module is successfully configured, the Fix Mode should automatically update from 3D/GNSS to 3D/GNSS/FLOAT (see figure below). After some time, the rover may be able to resolve carrier ambiguities and move to 3D/GNSS/FIXED mode with higher accuracy. Previous tests were unable to achieve FIXED mode on the rover.
 
 ### Bugs, Issues, Reminders (UBX)
 
