@@ -2,6 +2,16 @@
 
 This document is used to show how the hardware is setup on the rover module. Based on your use case, you can follow some of our steps when implementing the RTK-GPS system into your project.
 
+- [Rover Chassis](Hardware.md#Rover_Chassis)
+- [Rover Motors](Hardware.md#Rover_Motors)
+- [Rover Motor Controller](Hardware.md#Rover_Motor_Controller)
+- [Rover Batteries](Hardware.md#Rover_Batteries)
+- [Rover Microcontroller](Hardware.md#Rover_Microcontroller)
+- [Rover Low Accuracy GPS Module](Hardware.md#Rover_Low_Accuracy_GPS_Module)
+- [Rover RTK GPS Modules](Hardware.md#Rover_RTK_GPS_Modules)
+- [Rover Power Management](Hardware.md#Rover_Power Management)
+- [Rover Communication with Base-Station/User](Hardware.md#Rover_Communication_with_Base-Station/User)
+
 ## Rover Chassis
 
 <p align>
@@ -18,6 +28,7 @@ The rover chassis was already built and setup when we first got onto the project
 Our chassis came with motors geared 75:1 and all specifications we know of can be found <a href = https://www.generationrobots.com/en/401506-wild-thumper-6x6-chassis-with-75-1-motors.html> here </a>
 
 ## Rover Motor Controller
+### Sabertooth dual 25A motor driver
 
 The motor controller is used to power the 6 motors on the rover as well as send signals for when to rotate clockwise, counter-clockwise, or turn off. The specific motor controller that was already set in the rover can be found <a href = "https://www.dimensionengineering.com/products/sabertooth2x25">here</a>
 
@@ -28,6 +39,8 @@ The motor controller is used to power the 6 motors on the rover as well as send 
 Preface that the motor controller has 2 outputs. Each side of the rover corresponds to 1 output on the motor controller so all motors on one side of the rover all rotate together in the same fashion (Each side refers to 3 motors left and right of main body like left and right side of a car).
 
 ## Rover Batteries
+### 2S LiPo Batteries, 35 C, 5200 mAh
+
 The rover batteries we used are 2 LiPo Batteries which are both 5200 mAh at 7.4 V and 35 C. A picture of one of the batteries is shown below. 
 
 <p align = "center">
@@ -40,6 +53,7 @@ We did not do any testing on whether these batteries we best for our application
 In terms of wiring on the rover, I have included a graphic showing the different components of the rover wired together below. (!!! include wiring setup for the low accuracy testing and high accuracy testing --Real pictures and diagrams for both!!!!)
 
 ## Pixhawk Microcontroller
+### 3DR Pixhawk 1 Flight Controller (Discontinued)
 
 The 3DR Pixhawk 1 Flight Controller (Currently Discontinued) is the main brain of the operation. It loads up the current mission set and takes in current GPS location to determine route the rover must take. The Pixhawk then controls the rover motor controller to move the rover in the route direction while live updating position and route. The Pixhawk also connects to our base-station laptop to see live update on the mission and communicate commands to the Pixhawk.
 
@@ -50,6 +64,8 @@ All other specifications on the Pixhawk Microcontroller as well as the different
 </p>
 
 ## Rover Low Accuracy GPS Module
+### 3DR uBlox GPS with Compass
+
 The low accuracy GPS module we used in our low accuracy testing is the 3DR uBlox GPS With Compass. A picture of it is shown below and the GPS module can be found and bought <a href = https://uavsystemsinternational.com/products/3dr-ublox-gps-with-compass> here </a>.
 
 <p align = "center">
@@ -61,6 +77,7 @@ Documentation on how to use it, in combination with the Pixhawk can be found <a 
 This low accuracy GPS module worked great in testing (Based on performance in intial README) and was included in the rover setup when it was given to us. In high accuracy testing the module was only used for it's compass as we saw it perform better in combination with the Pixhawk built-in compass.
 
 ## Rover RTK GPS Modules
+### uBlox C94-M8P
 
 The RTK GPS modules we used in our project is the C94-M8P RTK module sold by U-Blox and can be found <a href = https://www.u-blox.com/en/product/c94-m8p> here </a>. This page also includes downloads for quick user guide for setting up the RTK system, a data sheet on hardware specs of the module, and a product summary on the board's features. A picture of module is displayed below.
 
@@ -73,6 +90,7 @@ The RTK modules were supplied by our client from a past project trying to implem
 The RTK modules come in a pair of 2 (One set as the Base Station module would be at a fixed position during use and the other as the Rover module would be attached to the rover). Information on how to use software to setup the modules are found in the (!!! include link to section in software README for setting up RTK modules!!!) 
 
 ## Rover communication with Base-Station/User
+### mRo SiK Telemetry Radio V2 915Mhz
 
 we utilize a 915 Mhz telemetry radio for communicating the Rover with the Base Station. The radio can be found <a href = "https://store.mrobotics.io/mRo-SiK-Telemetry-Radio-V2-915Mhz-p/m10013-rk.htm">here</a> and a picture of the radio is included below.
 
@@ -82,7 +100,9 @@ we utilize a 915 Mhz telemetry radio for communicating the Rover with the Base S
 
 This radio was used as it is said to have easy implementation for the Pixhawk micro-controller as well as Mission Planner and seemed to have good reviews.
 
-(*PREFACE!!: When buying the radio, we did not take into account that the radio frequency (915 Mhz) is the same frequency used by the RTK Ultra-high Frequency antennas. Operating at the same frequency could cause inteference due to being so close together but we were able to have the RTK Modules communicate at the Base Station by using Mission Planner to integrate the module through USB and at the Rover by sending communication from the RTK-GPS, through the GPS port, to the Pixhawk which would be then sent to the Base Station through the telemetry radio. If a new telemetry radio is bought, take this into account any maybe buy one that operates at a different frequency. You could also look into our setup as slow communication due to not utilizing the already made ultra-high frequency antennas and try to reimplement them in the hopes of providing better results!!!)
+(*PREFACE: The radio used for communication between mission planner and the Pixhawk operates at the same frequency as the communication between the two C94-M8P boards (915 MHz). Thus, operating both at the same time could cause inteference. By removing the antennas on the C94-M8P boards and connecting the base station board to Mission Planner, the RTK system can be setup using communication between Mission planner and the rover, without direct communication between the two C94-M8P boards.*)
+
+(*The C94-M8P application board also has a pin that can be used to turn of the internal radios. In our experiments, simply disconnecting the antenna proved sufficient. *)
 
 I have included a diagram below to show how the Base Station is setup. The telemetry radio is included in the Rover wiring diagram as well as the diagram below.
 
