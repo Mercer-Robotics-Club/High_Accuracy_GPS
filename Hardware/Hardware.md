@@ -49,9 +49,6 @@ The rover batteries we used are 2 LiPo Batteries which are both 5200 mAh at 7.4 
 
 We did not do any testing on whether these batteries we best for our application as these were already included in the Rover setup when given to us. They worked right from powering on and we decided not to do any more research/changes on the battery.
 
-## Rover Wiring
-In terms of wiring on the rover, I have included a graphic showing the different components of the rover wired together below. (!!! include wiring setup for the low accuracy testing and high accuracy testing --Real pictures and diagrams for both!!!!)
-
 ## Pixhawk Microcontroller
 ### 3DR Pixhawk 1 Flight Controller (Discontinued)
 
@@ -106,4 +103,6 @@ This radio was used as it is said to have easy implementation for the Pixhawk mi
 
 I have included a diagram below to show how the Base Station is setup. The telemetry radio is included in the Rover wiring diagram as well as the diagram below.
 
+## Rover Wiring
+A graphic showing the different components of the rover wired together is included below. (!!! include wiring setup for the low accuracy testing and high accuracy testing --Real pictures and diagrams for both!!!!)
 (!!!Wiring diagram of Base Station as well as a picture!!!)
