@@ -11,7 +11,7 @@ This project is from William Del Barrio's and Peter Richardson's Senior Design P
 Our client is Dr. Anthony Choi from Mercer University.
 
 ## Use Case
-We implemented the GPS system in an autonmous rover as pictured below
+We implemented the GPS system in an autonmous rover as pictured below. This rover system, ie. many of its hardware components, was adopted from a previous project under Dr. Choi.
 <p align="center">
   <img src="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Images/Senior%20Design%20High%20Accuracy%20GPS%20Update.jpg" />
 </p>
