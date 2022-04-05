@@ -35,6 +35,8 @@ Note that much of the following information was taken directly from the [C94-M8P
 
 An RTK GPS system requires two modules, one to act as a base station at a known fixed position, while the other is located on the rover and uses measurements from the base station to correct its own measurements. Both C94-M8P modules need to be set up independently in u-center.
 
+For each board, attach the radio antenna to the UHF port, and attach the GNSS antenna to the GNSS port (see figure below).
+
 #### Connecting to the C94 M8P board
 After connecting the C94-M8P application board to the Windows computer with u-center installed using a Micro-USB cable, communication can be established by connecting to the appropriate serial port in the u-center application (Found in the Ports section of Device Manager on Windows) and setting the baud rate (usually, this should be 9,600). See the figure below to set the appropriate COM port and buad rate. Afterwards, any status windows open on the application should automatically update with information from the board.
 
@@ -66,5 +68,9 @@ After connecting the u-center application to the rover module, only the UBX-CFG-
 
 Once the rover module is successfully configured, the Fix Mode should automatically update from 3D/GNSS to 3D/GNSS/FLOAT (see figure below). After some time, the rover may be able to resolve carrier ambiguities and move to 3D/GNSS/FIXED mode with higher accuracy. Previous tests were unable to achieve FIXED mode on the rover.
 
-### Bugs, Issues, Reminders (UBX)
+### Notes (UBX)
 
+Many messages can be polled to view status information. These include:
+- Survey In: UBX-NAV-SVIN
+- Satellite Information: UBX-NAV-SVINFO
+- Position: UBX-NAV-POSECEF and UBX-NAV-POSLLH
