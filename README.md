@@ -1,8 +1,8 @@
-# High_Accuracy_GPS_Implementation
+# High Accuracy GPS Implementation
 A repository that hosts information for the High Accuracy GPS Implementation project.
 
 ## Project Info
-This project is from our Senior Design Project at Mercer University. We were tasked with...
+This project is from William Del Barrio's and Peter Richardson's Senior Design Project at Mercer University. We were tasked with...
 1. Developing a high-accuracy GPS system
 2. Implementing it into a [common use case](README.md#Use_Case)
 3. Documenting the process for open-source use on how to possibly implement it into your project
