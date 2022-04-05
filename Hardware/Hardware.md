@@ -11,6 +11,7 @@ This document is used to show how the hardware is setup on the rover module. Bas
 - [Rover RTK GPS Modules](Hardware.md#Rover_RTK_GPS_Modules)
 - [Rover Power Management](Hardware.md#Rover_Power Management)
 - [Rover Communication with Base-Station/User](Hardware.md#Rover_Communication_with_Base-Station/User)
+- [Rover Wiring](Hardware.md#Rover_Wiring)
 
 ## Rover Chassis
 
@@ -97,9 +98,7 @@ we utilize a 915 Mhz telemetry radio for communicating the Rover with the Base S
 
 This radio was used as it is said to have easy implementation for the Pixhawk micro-controller as well as Mission Planner and seemed to have good reviews.
 
-(*PREFACE: The radio used for communication between mission planner and the Pixhawk operates at the same frequency as the communication between the two C94-M8P boards (915 MHz). Thus, operating both at the same time could cause inteference. By removing the antennas on the C94-M8P boards and connecting the base station board to Mission Planner, the RTK system can be setup using communication between Mission planner and the rover, without direct communication between the two C94-M8P boards.*)
-
-(*The C94-M8P application board also has a pin that can be used to turn of the internal radios. In our experiments, simply disconnecting the antenna proved sufficient. *)
+*PREFACE: The radio used for communication between mission planner and the Pixhawk operates at the same frequency as the communication between the two C94-M8P boards (915 MHz). Thus, operating both at the same time could cause inteference. By removing the antennas on the C94-M8P boards and connecting the base station board to Mission Planner, the RTK system can be setup using communication between Mission planner and the rover, without direct communication between the two C94-M8P boards. The C94-M8P application board also has a pin that can be used to turn of the internal radios. In our experiments, simply disconnecting the antenna proved sufficient.*
 
 I have included a diagram below to show how the Base Station is setup. The telemetry radio is included in the Rover wiring diagram as well as the diagram below.
 
