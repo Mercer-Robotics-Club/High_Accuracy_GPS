@@ -10,7 +10,7 @@ This document is used to show how the hardware is setup on the rover module. Bas
 - [Rover Low Accuracy GPS Module](Hardware.md#rover-low-accuracy-gps-module)
 - [Rover RTK GPS Modules](Hardware.md#rover-rtk-gps-modules)
 - [Rover Power Management](Hardware.md#rover-power-management)
-- [Rover Communication with Base-Station/User](Hardware.md#rover-communication-with-base-station/user)
+- [Rover Communication with Base-Station/User](Hardware.md#rover-communication-with-base-stationuser)
 - [Rover Wiring](Hardware.md#rover-wiring)
 
 ## Rover Chassis
@@ -50,7 +50,7 @@ The rover batteries we used are 2 LiPo Batteries which are both 5200 mAh at 7.4 
 
 We did not do any testing on whether these batteries we best for our application as these were already included in the Rover setup when given to us. They worked right from powering on and we decided not to do any more research/changes on the battery.
 
-## Pixhawk Microcontroller
+## Rover Microcontroller
 ### 3DR Pixhawk 1 Flight Controller (Discontinued)
 
 The 3DR Pixhawk 1 Flight Controller (Currently Discontinued) is the main brain of the operation. It loads up the current mission set and takes in current GPS location to determine route the rover must take. The Pixhawk then controls the rover motor controller to move the rover in the route direction while live updating position and route. The Pixhawk also connects to our base-station laptop to see live update on the mission and communicate commands to the Pixhawk.
