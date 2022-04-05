@@ -16,7 +16,7 @@ We implemented the GPS system in an autonmous rover as pictured below. This rove
   <img src="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Images/Senior%20Design%20High%20Accuracy%20GPS%20Update.jpg" />
 </p>
 <p>
-  More information on how to set the hardware and electronics can be found in the <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Hardware">Hardware README</a>
+  More information on how to set the hardware and electronics can be found in <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Hardware">Hardware</a>.
 
 ## Supporting Hardware
 For the rover, we utilized a variety of hardware and electronics together in it's current design.
