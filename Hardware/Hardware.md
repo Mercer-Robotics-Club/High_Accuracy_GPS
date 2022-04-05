@@ -2,16 +2,16 @@
 
 This document is used to show how the hardware is setup on the rover module. Based on your use case, you can follow some of our steps when implementing the RTK-GPS system into your project.
 
-- [Rover Chassis](Hardware.md#Rover_Chassis)
-- [Rover Motors](Hardware.md#Rover_Motors)
-- [Rover Motor Controller](Hardware.md#Rover_Motor_Controller)
-- [Rover Batteries](Hardware.md#Rover_Batteries)
-- [Rover Microcontroller](Hardware.md#Rover_Microcontroller)
-- [Rover Low Accuracy GPS Module](Hardware.md#Rover_Low_Accuracy_GPS_Module)
-- [Rover RTK GPS Modules](Hardware.md#Rover_RTK_GPS_Modules)
-- [Rover Power Management](Hardware.md#Rover_Power Management)
-- [Rover Communication with Base-Station/User](Hardware.md#Rover_Communication_with_Base-Station/User)
-- [Rover Wiring](Hardware.md#Rover_Wiring)
+- [Rover Chassis](Hardware.md#rover-chassis)
+- [Rover Motors](Hardware.md#rover-motors)
+- [Rover Motor Controller](Hardware.md#rover-motor-controller)
+- [Rover Batteries](Hardware.md#rover-batteries)
+- [Rover Microcontroller](Hardware.md#rover-microcontroller)
+- [Rover Low Accuracy GPS Module](Hardware.md#rover-low-accuracy-gps-module)
+- [Rover RTK GPS Modules](Hardware.md#rover-rtk-gps-modules)
+- [Rover Power Management](Hardware.md#rover-power-management)
+- [Rover Communication with Base-Station/User](Hardware.md#rover-communication-with-base-station/user)
+- [Rover Wiring](Hardware.md#rover-wiring)
 
 ## Rover Chassis
 
@@ -86,6 +86,8 @@ The RTK GPS modules we used in our project is the C94-M8P RTK module sold by U-B
 The RTK modules were supplied by our client from a past project trying to implement the board into the same rover setup. The RTK modules are featured to have "centimeter level accuracy in clear sky environments" and testing by our team was done, included in the main README, to measure relative accuracy and confirm these results. 
 
 The RTK modules come in a pair of 2 (One set as the Base Station module would be at a fixed position during use and the other as the Rover module would be attached to the rover). Information on how to use software to setup the modules are found in the (!!! include link to section in software README for setting up RTK modules!!!) 
+
+## Rover Power Management
 
 ## Rover communication with Base-Station/User
 ### mRo SiK Telemetry Radio V2 915Mhz
