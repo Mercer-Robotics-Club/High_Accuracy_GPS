@@ -1,5 +1,6 @@
 # Software
-This file is to layout...
+
+This section will address the following:
 - All the software being used for the project
 - How to set up all software
 - Version required for all software
@@ -9,15 +10,40 @@ This file is to layout...
 
 ### Version & Download (MP)
 
-The software we used, Ardupilot Mission Planner (Version !!!!!!) can be found and downloaded <a href = https://firmware.ardupilot.org/Tools/MissionPlanner/archive/> here </a>. Just click the download button and complete setup.
+The software we used, Ardupilot Mission Planner (Version 1.3.76 build 1.3.8029.15962) can be found and downloaded <a href = https://firmware.ardupilot.org/Tools/MissionPlanner/archive/> here </a>. Just click the download button and complete setup.
 
-User guide for u-center can be downloaded <a href = https://ardupilot.org/planner/> here </a>
-
-*NOTE: The version of Mission Planner that we used is version !!!!!! but newer version should still work in this setup. The location of certain items in Mission Planner may be moved, changed, or renamed. Please research the user documentation or online help in that case*
+*NOTE: The version of Mission Planner that we used is version !!!!!! but newer versions should still work in this setup. The location of certain items in Mission Planner may be moved, changed, or renamed. Please research the user documentation or online help in that case*
 
 ### Setup (MP)
 
+To install firmware on the Pixhawk, a wired connection is required, with the MavLink disconnected. Connect the Pixhawk to the computer using USB. This should power the rover on. Do not connect using MavLink. Navigate to the SETUP tab on Mission Planner in the top left of the application window, select "Install Firmware", and follow the instructions using the Rover type. Once finished, the rover can be disconnected from the computer.
+
+
+We connect Mission Planner to the Pixhawk Microcontroller using the mRo Radio 915 MHz Telemetry Kit. Simply connect the one of the two radios to the computer using USB, and connect the other to the Pixhawk (see <a href="https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Hardware.md#Rover_Communication_with_Base-Station/User">Hardware</a>). With the rover powered on, you can select the appropriate COM port (use Windows Device Manager to identify COM number) on Mission Planner in the top right of the application window, and click CONNECT. Once connected, the DATA tab of Mission Planner (see top left of the application window) should update in real time with rover information.
+
+Navigate to the SETUP tab of Mission Planner, and select "Mandatory Hardware" on the left of the application window. To use the rover, the Pixhawk Microcontroller usually requires a GPS to be connected, and the following hardware must be calibrated:
+
+- Frame Type
+- Accel Calibration
+- Compass
+- Servo Output
+- ESC Calibration
+
+Control of the rover can be operated by the user using Mission Planner on the computer. If a remote controller is used instead, then the other hardware may also need to be calibrated. We also did not need to calibrate the "Servo Output" and "ESC Calibration". With our motor setup, the Servo Output should only have two outputs: "ThrottleLeft" and "ThrottleRight". Note that the pin numbers correspond to the pin outputs on the Pixhawk Microcontroller that connect to the Sabertooth motor controller, which should configure the output by without any need for calibration.
+
+To calibrate the accelerometer, there are two or more calibrations needed. One involves leaving the rover flat and level; the other requires orienting the each face of the rover down (ie. front, back, top, bottom, left, right). The compass calibration requires performing a similar method after selecting the compasses you wish to use.
+
+See <a href="https://ardupilot.org/copter/docs/configuring-hardware.html">Mandatory Hardware Configuration</a> for more information about hardware configuration.
+
+Note that other hardware can be configured using the "Optional Hardware" section in the left of the application window. In particular, the "RTK/GPS Inject" section, is required when using the C94-M8P. In this section, a base station module can be connected using the appropriate COM port, and a survey in can be conducted, saved, and used in later operations. Once the base station module is connected and a fixed position is selected, Mission Planner will automatically attempt to inject RTK GPS RTCM correction messages for the Pixhawk Microcontroller to use.
+
+Once properly configured, with the rover powered on, the rover can be armed in the DATA tab on Mission Planner in the top left of the application window. On the left side of the application window, many tabs are available; in particular, "Actions" and "Messages" will most likely be used frequently by the user. In the "Actions" tab, select "Arm/Disarm" to attempt to arm the rover (if not already armed).
+
+Once configured correctly, the rover can be controlled using either a romote controller or by uploading a mission plan using the PLAN tab on Mission Planner in the top left of the application window. !!!!
+
 ### Bugs, Issues, Reminders (MP)
+
+Understand that specific bugs and issues may require broader research using online resources. Pixhawk Microcontroller parameters can be found in the "Standard Params", "Advanced Params", or "Full Parameter List" sections in the CONFIG tab on Mission Planner in the top left of the application window. The user can use these sections to properly address any issues, including those involving the serial ports, servo outputs, arming requirements, remote control requirements, or navigation of the rover. More information can be found in the Ardupilot documentation or online forum.
 
 ## UBlox U-Center
 
