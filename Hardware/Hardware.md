@@ -105,5 +105,15 @@ This radio was used as it is said to have easy implementation for the Pixhawk mi
 I have included a diagram below to show how the Base Station is setup. The telemetry radio is included in the Rover wiring diagram as well as the diagram below.
 
 ## Rover Wiring
-A graphic showing the different components of the rover wired together is included below. (!!! include wiring setup for the low accuracy testing and high accuracy testing --Real pictures and diagrams for both!!!!)
-(!!!Wiring diagram of Base Station as well as a picture!!!)
+A graphic showing the different components of the rover wired together is included below. The connections should be fairly intuitive, with wiring for each component already grouped together in the correct order to connect to the Pixhawk.
+
+<p align = "center">
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/circuit-design.png" />
+</p>
+
+We use the J8 interface on the C94-M8P to connect to the GPS port on the Pixhawk Microcontroller. Information on the J8 interface can be found in the user guide, <a href = https://content.u-blox.com/sites/default/files/C94-M8P-AppBoard_UserGuide_%28UBX-15031066%29.pdf> here </a>. We connect voltage and ground normally, and connect pin 9 of the J8 interface (RXD_GNSS) to the CAN2 RX pin of the Pixhawk, and pin 10 (TXD_GNSS) on the C94-M8P to the CAN2 TX pin of the Pixhawk. Information of the pinouts of the Pixhawk can be found <a href = https://ardupilot.org/copter/docs/common-pixhawk-overview.html> here </a>.
+
+<p align = "center">
+  <img src = "https://github.com/Mercer-Robotics-Club/High_Accuracy_GPS/blob/main/Hardware/Images/c94-m8p-connection.jpg" />
+</p>
+
